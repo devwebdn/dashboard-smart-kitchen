@@ -1,7 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
-const urlEnv = import.meta.env.VITE_SUPABASE_URL;
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Ambil dari environment variable (jika ada), atau gunakan default Supabase project URL & Key
+const urlEnv = import.meta.env.VITE_SUPABASE_URL || "https://bvapgaftppwukahajein.supabase.co";
+const key = import.meta.env.VITE_SUPABASE_ANON_KEY || "sb_publishable_kxsDTXXNDSISNq1mmtyhMQ_B9sDaAwk";
 
 // Format key baru Supabase (sb_publishable_xxx) — URL bisa didapat dari key
 function extractUrlFromKey(k) {
